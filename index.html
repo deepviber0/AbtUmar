@@ -12,10 +12,107 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
+        
         nav{
             display: none;
             text-decoration: none;
         }
+
+        #contact{
+            margin-top:20px;
+        }
+
+
+
+        input:focus {
+            color: red;
+            border-color: red;
+            outline: none; 
+        }
+        
+        input, textarea {
+            width: 250px;
+            height: 25px;
+            background: white;
+        }
+
+        textarea {
+            height: 200px;
+        }
+        fieldset{
+            width:100%;
+            height:690px;
+            
+        }
+        
+        
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 10px;
+            color: #00c8ff;
+        }
+        
+        form {
+            background: linear-gradient(25deg, rgb(5, 10, 10), rgb(7, 33, 7));
+        }
+        
+        legend {
+            color: rgb(14, 223, 251);
+            font-weight: bold;
+            background: transparent;
+        }
+        #submit {
+            border-radius: 5px;
+        }
+        label {
+            color: white;
+            background: transparent;
+        }
+
+        #submit:hover{
+            box-shadow:1px 4px 8px 4px aqua;
+        }
+        input:hover{
+            box-shadow:1px 4px 8px 4px aqua;
+        }
+        textarea:hover{
+            box-shadow:1px 4px 8px 4px aqua;
+        }
+        label{
+            margin-bottom: 10px;;
+        }
+        #submit{
+            height:33px
+        }
+        input{
+            border-radius: 7px;
+        }
+        textarea{
+            border-radius: 7px;
+        }
+
+        ::-webkit-input-placeholder{
+            color:rgb(51, 114, 215);
+            padding: 5px;
+        }
+
+        label::selection{
+            color:rgb(195, 238, 22);
+        }
+        legend::selection{
+            color:rgb(245, 130, 224);
+        }
+        #contact h1{
+            color: aqua;
+        }
+
+
+
+
 
         #toggle-menu:checked + label + nav {
             display: flex;
@@ -29,6 +126,8 @@
             right: 70px;
             width: auto; /* Full width on mobile */
             padding: 20px;
+            overflow: auto;
+            height:70px;
         }
         
         /* Show the toggle menu icon on mobile view */
@@ -42,9 +141,48 @@
             
         }
 
+        #about{
+           
+            height: 700px;
+        }
         nav a{
             text-decoration: none;
             color: #080707;
+        }
+
+        #skills h1{
+            font-size:26px ;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:rgb(241, 243, 243);
+            margin-left: 14px;
+            margin-bottom: 0%;
+            padding-top: 100px;
+            margin-top: 0%;
+            background: transparent;
+            z-index: 0;
+        }
+        #skills p{
+            color:aqua;
+            margin-left: 14px;
+            margin-top: 30px;
+            font-size: 18px;
+            background:transparent;
+        
+        }
+        #skills{
+            z-index: 0;
+            position: relative;
+            width: 100%;
+            margin-top: 0%;
+            margin: 0%;
+            height:770px;
+        }
+        .icons{
+            color: aliceblue;
+            font-size: 25px;
+            margin-left: 25px;
+            margin-top: 0%;
+           
         }
         
         label{
@@ -86,11 +224,35 @@
         }
         
 
-       
-        
+        #about h1{
+            margin-top: 100px;
+            padding-top:150px ;
+            font-size:25px ;
+            color:aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #about p{
+            font-size: 18px;
+        }
+        #about p::selection{
+            color:aqua;
+            background-color: #080707;
+        }
+        header{
+            z-index: 100;
+        }
+
+        #mainimg{
+            height:150px;
+            margin-top: -70px;
+            margin-bottom: 90px;
+            z-index: 10;
+        }
+
         nav a::selection{
             color:#e9eeef;
         }
+
        
         body {
             overflow-x: hidden; /* Allow vertical scrolling */
@@ -100,6 +262,7 @@
         #i1{
             color: rgb(232, 236, 240);
             margin-left: 14px;
+            background-color: transparent;
             font-size: 25px;
             margin-bottom: 0;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -108,8 +271,12 @@
             color: #15ebfa;
 
         }
+        header .home1{
+            background-color: #d96464;
+        }
         #i2{
             color: rgb(21, 243, 239);
+            background-color: transparent;
             margin-left: 14px;
             font-size: 35px;
             margin-top: 0;
@@ -120,7 +287,7 @@
             color: #e9eeef;
         }
         .animated-text {
-            font-size: 25px;
+            font-size: 20px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             margin-left: 14px;
             margin-top: 0;
@@ -131,12 +298,13 @@
             border-right: 2px solid #15ebfa; /* Cursor effect */
             animation: typing 7s steps(40, end) infinite;
             margin-bottom: 0%;
+            position: relative;
         }
 
         
         @keyframes typing {
             0% { width: 0%; }
-            50% { width: 284px; }
+            50% { width: 220px; }
             100%{ width: 0%;}
         }
         .animated-text::selection{
@@ -223,8 +391,27 @@
 
         }
 
-        @media screen and (min-width: 768px) {
+        .home1{
+            background-color: #080707;
+            height:600px;
+        }
 
+        @media screen and (min-width: 768px) {
+            
+            #mainimg{
+                height:390px;
+                background: transparent;
+                margin-top: 110px;
+                margin-bottom: 100px;
+                margin-right: 200px;
+                position: absolute;
+                top:10px;
+                left:950px;
+                transform: translate(10,950);
+            }
+
+
+           
             nav {
                 display: flex;
                 gap: 18px;
@@ -232,6 +419,10 @@
             #projects,#about{
                 margin-left:150px;
                 margin-top: 35px;
+            }
+            .home1{
+                background-color: #080707;
+                height:650px;
             }
         
             nav a {
@@ -247,17 +438,8 @@
             label{
                 display: none;
             }
-            header {
-                position: sticky;
-                top: 0;
-                left: 0;
-                width: 96%;
-                padding: 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: #080707;
-            }
+           
+            
         
             #h {
                 color: aliceblue;
@@ -431,33 +613,235 @@
                 border: 2px solid rgb(10, 4, 4);
 
             }
+            header{
+                position: absolute;
+            }
+            #about h1{
+                font-size:26px ;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color:aqua;
+                margin-left: 430px;
+                margin-bottom: 0%;
+                padding-top: 100px;
+                margin-top: 0%;
+                background: transparent;
+                z-index: 0;
+            }
+            #about{
+                background-image: url('back3.jpg');
+               height:690px;
+               z-index: 0;
+               position: relative;
+               width: 100%;
+               background-repeat: no-repeat;
+               background-size: cover;
+               margin: 0%;
+               margin-bottom: 0%;
+               padding-top: 0%;
+                
+
+            }
+            
+            
+            header {
+                position: fixed;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                width: 96%;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #080707;
+            }
+            
+            
+            header,.home1{
+                margin-bottom: 0%;
+
+            }
+            #about p{
+                font-size: 18px;
+                background: transparent;
+                margin-left: 150px;
+                margin-top: 200px;
+                margin-bottom: 0%;
+            }
+            #about p::selection{
+                color:aqua;
+                background-color: #080707;
+            }
+            header{
+                position: sticky;
+            }
+            section{
+                z-index: 1;
+            }
+
+            *{
+                header{
+                    position: fixed;
+                    z-index: 1000;
+                    
+                }
+            }
+
+            #skills h1{
+                font-size:26px ;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color:rgb(241, 243, 243);
+                margin-left: 430px;
+                margin-bottom: 0%;
+                padding-top: 100px;
+                margin-top: 0%;
+                background: transparent;
+                z-index: 0;
+            }
+            #skills p{
+                color:aqua;
+                margin-left: 150px;
+                margin-top: 30px;
+                font-size: 18px;
+                background:transparent;
+            
+            }
+            #skills{
+                z-index: 0;
+                position: relative;
+                width: 100%;
+                margin-top: 0%;
+                margin: 0%;
+                height:690px;
+            }
+            .icons{
+                color: aliceblue;
+                font-size: 25px;
+                margin-left: 320px;
+            }
+
+
+
+
+            input:focus {
+                color: red;
+                border-color: red;
+                outline: none; 
+            }
+            
+            input, textarea {
+                width: 250px;
+                height: 25px;
+                background: white;
+            }
+    
+            textarea {
+                height: 200px;
+            }
+            fieldset{
+                width:100%;
+                height:690px;
+                
+            }
+            
+            
+            fieldset {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 10px;
+                color: #00c8ff;
+            }
+            
+            form {
+                background: linear-gradient(25deg, rgb(5, 10, 10), rgb(7, 33, 7));
+            }
+            
+            legend {
+                color: rgb(14, 223, 251);
+                font-weight: bold;
+                background: transparent;
+            }
+            #submit {
+                border-radius: 5px;
+            }
+            label {
+                color: white;
+                background: transparent;
+            }
+    
+            #submit:hover{
+                box-shadow:1px 4px 8px 4px aqua;
+            }
+            input:hover{
+                box-shadow:1px 4px 8px 4px aqua;
+            }
+            textarea:hover{
+                box-shadow:1px 4px 8px 4px aqua;
+            }
+            label{
+                margin-bottom: 10px;;
+            }
+            #submit{
+                height:33px
+            }
+            input{
+                border-radius: 7px;
+            }
+            textarea{
+                border-radius: 7px;
+            }
+    
+            ::-webkit-input-placeholder{
+                color:rgb(51, 114, 215);
+                padding: 5px;
+            }
+    
+            label::selection{
+                color:rgb(195, 238, 22);
+            }
+            legend::selection{
+                color:rgb(245, 130, 224);
+            }
+            #contact h1{
+                color: aqua;
+            }
+           
+
         }
 
 
     </style>
    
 </head>
-<body>
-    <header>
-        <a id="h">Portfolio</a>
-        <input type="checkbox" id="toggle-menu" class="toggle-menu">
-        <label for="toggle-menu" class="hash"><i class='bx bx-menu'></i></label>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            
-        </nav>
-    </header>
+<>
+    <div id="home">
+        <header>
+            <a id="h">Portfolio</a>
+            <input type="checkbox" id="toggle-menu" class="toggle-menu">
+            <label for="toggle-menu" class="hash"><i class='bx bx-menu'></i></label>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                
+            </nav>
+        </header></div>
     <div class="home1">
         <br><br><br><br><br><br><br>
         <br><div class="id11" data-aos="fade-right" data-aos-duration="1500">
-        <h3  id="i1">Hello, It's Me</h3><br></div>
+            <h3  id="i1" style="background-color:transparent"><span style="color:rgb(16, 225, 236)">Hello,</span> It's Me</h3><br></div>
+            <img id="mainimg" src="new.jpg" alt="image" align="right" >
+
+
         <div class="id12" data-aos="fade-left" data-aos-duration="1500">
-            <h2 id="i2">Shaik Umar Althaf</h2></div>
+            <h2 id="i2">Shaik Umar Althaf</h2></div>           
             <br>
+
 
         <h3 class="animated-text">And I'm A <span style="color:aqua">Web Developer</span></h3>
         <div id="id13" data-aos="fade-up"
@@ -472,40 +856,68 @@
        </div>
        <br><br>
        <a href="path" download="filename" class="download-btn">Download CV</a>
-    </div>
+<br>
+    </div></div>
     <section id="about">
-        <p style="color:white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, quidem voluptatum nesciunt optio quibusdam nihil, enim inventore voluptas amet voluptatibus corrupti aliquam natus itaque aspernatur nemo quis totam laudantium expedita.
-        Doloremque facilis atque laboriosam labore aperiam minima neque a doloribus ab nostrum magni odit ipsa deleniti, dignissimos ut officiis animi! Ab aut adipisci consequatur dicta error dolorem nobis possimus accusamus.
-        Aperiam voluptatibus, enim accusantium deserunt incidunt sunt illum optio quisquam, illo quia odio nemo? Quisquam dolor, aliquid laudantium quidem natus voluptates ullam, animi nostrum excepturi a inventore quae non facilis.
-        Ex tempore a nulla eaque magnam impedit eum corporis, voluptatem iste corrupti odit possimus distinctio modi aut ducimus error voluptas at doloribus voluptatibus totam nostrum laborum deleniti. Dicta, omnis natus!
-        Soluta recusandae eaque modi, reiciendis inventore ut repellendus! Libero laboriosam eos facilis excepturi possimus laborum autem ut, reprehenderit dolore aperiam eaque vitae in eligendi tenetur impedit mollitia voluptatibus molestias! Ducimus!
-        Quod cum voluptatibus illum voluptatem enim recusandae dolorem repellat nisi velit mollitia dolores sed perspiciatis eveniet laborum earum obcaecati, unde dignissimos deleniti esse fugit eligendi quia officiis! Quaerat, illum non.
-        Expedita non labore tempora possimus temporibus. Cum accusamus dolorem, repudiandae saepe eos error pariatur, ab itaque ipsum iste minus. Et quasi enim nobis placeat nostrum nam rem adipisci illo repudiandae!
-        Dolores exercitationem, doloremque architecto consequuntur in alias ipsam adipisci eaque temporibus, voluptate ea incidunt optio fugiat, quod soluta illum blanditiis numquam impedit tempore aut odio quos quis. Nulla, dolores tempora!
-        Minima quo error, ipsum provident, natus nesciunt excepturi nulla temporibus architecto earum nobis aliquid cumque. In esse vero dolores numquam doloremque, veniam eos ullam, odit repellat quod quaerat! Quaerat, sed?
-        Earum vel eos sit quam magni eaque rem illum blanditiis odio error recusandae molestiae accusamus dolores quasi in quas beatae voluptate nobis, cupiditate dolore? Asperiores modi corporis voluptas iure odio.</p>
+        <h1 id="abouth1"  data-aos="fade-right" data-aos-duration="1500">About Me</h1>
+        <p style="color:white" data-aos="fade-up" data-aos-duration="1500">
+            Hello! I'm Umar, an aspiring web developer at the start of my journey, building skills and exploring the exciting <br>possibilities in tech. My focus is on creating clean, functional websites that offer a smooth user experience.<br>
+
+I’m drawn to web development for the blend of creativity and logic it offers, allowing me to bring ideas to life on the screen.<br><br>Although I’m still building my foundation, I'm excited about learning new technologies and tackling challenges <br>that will help me grow.
+
+Beyond coding, I have a passion for anime, which has also inspired some of my projects.<br> My portfolio is a way to share my journey and connect with others who share similar interests.
+        </p>
+    </section>
+    <section id="skills">
+        <h1 data-aos="fade-down" data-aos-duration="1500">Skills</h1>
+        <p >
+           
+           <p id="pp" data-aos="fade-right" data-aos-duration="1500"> ➢ I Am Proficient In A Range Of Technologies And Programming Languages, Including HTML, CSS, And JavaScript <br> For Web Development, As Well As Java, Python, And C For Versatile Software Solutions.</><br></p>
+           <p id="pp" data-aos="fade-left" data-aos-duration="1500"> ➢ I Am Currently Expanding My Skill Set By Pursuing The MERN Stack,<br> Deepening My Knowledge In Full-Stack Web Development.<br>
+           </p>
+           <p id="pp" data-aos="fade-right" data-aos-duration="1500">            ➢ My Expertise Also Extends To Using Tkinter For GUI Development And Figma For Design,<br> Allowing Me To Create Intuitive, User-Friendly Interfaces.<br>
+           </p>
+           <p id="pp" data-aos="fade-left" data-aos-duration="1500">            ➢ I Value Consistency In My Work, Ensuring That Every Project Maintains A High Standard From Start To Finish.<br>
+           </p>
+           <p id="pp" data-aos="fade-right" data-aos-duration="1500"> ➢ My Logical Problem-Solving Abilities Enable Me To Approach Challenges Creatively, Ensuring Effective<br> Solutions That Align With Project Goals.
+           </p>
+        </p>
+<div class="icons">
+    <i data-aos="fade-up" data-aos-duration="1500" class='bx bxl-java'></i>
+    <i class='bx bxl-python' data-aos="fade-down" data-aos-duration="1500"></i>
+    <i class='bx bxl-html5' data-aos="fade-up" data-aos-duration="1500"></i>
+    <i class='bx bxl-css3' data-aos="fade-down" data-aos-duration="1500"></i>
+    <i class='bx bxl-javascript' data-aos="fade-up" data-aos-duration="1500"></i>
+    <i class='bx bxl-react' data-aos="fade-down" data-aos-duration="1500"></i>
+    <i class='bx bxl-mongodb' data-aos="fade-up" data-aos-duration="1500"></i>
+    <i class='bx bxl-nodejs' data-aos="fade-down" data-aos-duration="1500"></i>
+    <i class='bx bxl-figma' data-aos="fade-up" data-aos-duration="1500"></i>
+</div>
+
     </section><br>
-    <div id="skills" data-aos="fade-right" >
-        
-    </div>
-    <section id="projects">
-        <h1 style="color:#e9eeef">HOME:</h1>
-        <p id="home" style="color:white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, quidem voluptatum nesciunt optio quibusdam nihil, enim inventore voluptas amet voluptatibus corrupti aliquam natus itaque aspernatur nemo quis totam laudantium expedita.
-            Doloremque facilis atque laboriosam labore aperiam minima neque a doloribus ab nostrum magni odit ipsa deleniti, dignissimos ut officiis animi! Ab aut adipisci consequatur dicta error dolorem nobis possimus accusamus.
-            Aperiam voluptatibus, enim accusantium deserunt incidunt sunt illum optio quisquam, illo quia odio nemo? Quisquam dolor, aliquid laudantium quidem natus voluptates ullam, animi nostrum excepturi a inventore quae non facilis.
-            Ex tempore a nulla eaque magnam impedit eum corporis, voluptatem iste corrupti odit possimus distinctio modi aut ducimus error voluptas at doloribus voluptatibus totam nostrum laborum deleniti. Dicta, omnis natus!
-            Soluta recusandae eaque modi, reiciendis inventore ut repellendus! Libero laboriosam eos facilis excepturi possimus laborum autem ut, reprehenderit dolore aperiam eaque vitae in eligendi tenetur impedit mollitia voluptatibus molestias! Ducimus!
-            Quod cum voluptatibus illum voluptatem enim recusandae dolorem repellat nisi velit mollitia dolores sed perspiciatis eveniet laborum earum obcaecati, unde dignissimos deleniti esse fugit eligendi quia officiis! Quaerat, illum non.
-            Expedita non labore tempora possimus temporibus. Cum accusamus dolorem, repudiandae saepe eos error pariatur, ab itaque ipsum iste minus. Et quasi enim nobis placeat nostrum nam rem adipisci illo repudiandae!
-            Dolores exercitationem, doloremque architecto consequuntur in alias ipsam adipisci eaque temporibus, voluptate ea incidunt optio fugiat, quod soluta illum blanditiis numquam impedit tempore aut odio quos quis. Nulla, dolores tempora!
-            Minima quo error, ipsum provident, natus nesciunt excepturi nulla temporibus architecto earum nobis aliquid cumque. In esse vero dolores numquam doloremque, veniam eos ullam, odit repellat quod quaerat! Quaerat, sed?
-            Earum vel eos sit quam magni eaque rem illum blanditiis odio error recusandae molestiae accusamus dolores quasi in quas beatae voluptate nobis, cupiditate dolore? Asperiores modi corporis voluptas iure odio.</p>
-    </section>
-    <section id="contact">
-        
-    </section>
-    <section>
-        
+    <section id="contact" data-aos="fade-down" data-aos-duration="1500">
+   
+        <form action="https://api.web3forms.com/submit" method="POST" onsubmit="return sub(event)">
+            <fieldset>
+                <h1>Contact Me <i class='bx bxs-envelope'></i></h1>
+                <br>
+    
+               
+                    <input type="hidden" name="access_key" value="f4bf5b2a-790a-4cfe-9587-1c686fc68109">
+    
+                <label for="name"></label>
+                <input type="text" placeholder="user_name" name="name" id="name" required autofocus><br><br>
+                <label for="mail"></label>
+                <input type="email" name="mail" placeholder="example@gmail.com" id="mail" required><br><br>
+    
+                <label for="message"></label>
+                <textarea id="message" placeholder="Communication Here!" name="message" required></textarea><br><br>
+    
+                <input type="submit" id="submit">
+                
+            </fieldset>
+        </form>
+    
     </section>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -538,4 +950,4 @@
         
     </script>
 </body>
-            </html>
+    </html>
