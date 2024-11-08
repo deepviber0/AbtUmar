@@ -12,6 +12,56 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
+        nav{
+            display: none;
+            text-decoration: none;
+        }
+
+        #toggle-menu:checked + label + nav {
+            display: flex;
+            flex-direction: column;
+            gap:17px;
+            color: #080707;
+            text-decoration: none;
+            background-color: rgb(39, 227, 241);
+            position: absolute;
+            top:36px; /* Adjust to your header's height */
+            right: 70px;
+            width: auto; /* Full width on mobile */
+            padding: 20px;
+        }
+        
+        /* Show the toggle menu icon on mobile view */
+        .toggle-menu {
+            display: none;
+
+        }
+        header{
+            position: sticky;
+            background-color: #080707;
+            
+        }
+
+        nav a{
+            text-decoration: none;
+            color: #080707;
+        }
+        
+        label{
+            font-size: 24px;
+            color:white;
+            display: flex;       
+            position: absolute;
+            top:9px;
+            right:70px;
+        }
+        #about,#projects{
+            margin-left: 14px;
+            margin-top: 30px;
+        }
+        
+        
+
         header {
             position: fixed;
             top: 0;
@@ -28,43 +78,16 @@
             color: rgb(154, 169, 183);
             font-size: 20px;
             margin-right:60px;
+            background:transparent;
         }
         #h::selection{
             background-color: black;
             color: #15ebfa;
         }
-        nav {
-            display: flex;
-            gap: 10px; /* Smaller gap for mobile */
-            flex-wrap: wrap;
-             /* Allows wrapping if necessary */
-        }
         
-        nav a {
-            color: rgb(3, 238, 238);
-            text-decoration: none;
-            font-size: 16px;
-            margin: 0;
-            position: relative;
-            
-        }
+
+       
         
-        nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background-color: rgb(3, 238, 238);
-            transform: scaleX(0);
-            transform-origin:left;
-            transition: transform 0.3s ease;
-        }
-        
-        nav a:hover::after {
-            transform: scaleX(1);
-        }
         nav a::selection{
             color:#e9eeef;
         }
@@ -190,7 +213,7 @@
             margin-left: 14px;
             color: aqua;
             border: 2px solid white;
-
+            margin-bottom: 15px;
         }
 
         .download-btn:hover{
@@ -202,10 +225,30 @@
 
         @media screen and (min-width: 768px) {
 
-           
-            
+            nav {
+                display: flex;
+                gap: 18px;
+            }
+            #projects,#about{
+                margin-left:150px;
+                margin-top: 35px;
+            }
+        
+            nav a {
+                display:flex;
+                color: aqua;
+                text-decoration: none;
+                font-size: 16px;
+                position: relative;
+            }
+            .toggle-menu{
+                display: none;
+            }
+            label{
+                display: none;
+            }
             header {
-                position: fixed;
+                position: sticky;
                 top: 0;
                 left: 0;
                 width: 96%;
@@ -213,6 +256,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                background-color: #080707;
             }
         
             #h {
@@ -232,6 +276,7 @@
             }
         
             nav a {
+                display:flex;
                 color: aqua;
                 text-decoration: none;
                 font-size: 16px;
@@ -377,7 +422,7 @@
                 margin-left: 150px;
                 color: aqua;
                 border: 2px solid white;
-
+                margin-bottom: 15px;
             }
 
             .download-btn:hover{
@@ -395,6 +440,8 @@
 <body>
     <header>
         <a id="h">Portfolio</a>
+        <input type="checkbox" id="toggle-menu" class="toggle-menu">
+        <label for="toggle-menu" class="hash"><i class='bx bx-menu'></i></label>
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -407,7 +454,7 @@
     <div class="home1">
         <br><br><br><br><br><br><br>
         <br><div class="id11" data-aos="fade-right" data-aos-duration="1500">
-        <h4  id="i1">Hello, It's Me</h4><br></div>
+        <h3  id="i1">Hello, It's Me</h3><br></div>
         <div class="id12" data-aos="fade-left" data-aos-duration="1500">
             <h2 id="i2">Shaik Umar Althaf</h2></div>
             <br>
@@ -427,13 +474,32 @@
        <a href="path" download="filename" class="download-btn">Download CV</a>
     </div>
     <section id="about">
-
+        <p style="color:white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, quidem voluptatum nesciunt optio quibusdam nihil, enim inventore voluptas amet voluptatibus corrupti aliquam natus itaque aspernatur nemo quis totam laudantium expedita.
+        Doloremque facilis atque laboriosam labore aperiam minima neque a doloribus ab nostrum magni odit ipsa deleniti, dignissimos ut officiis animi! Ab aut adipisci consequatur dicta error dolorem nobis possimus accusamus.
+        Aperiam voluptatibus, enim accusantium deserunt incidunt sunt illum optio quisquam, illo quia odio nemo? Quisquam dolor, aliquid laudantium quidem natus voluptates ullam, animi nostrum excepturi a inventore quae non facilis.
+        Ex tempore a nulla eaque magnam impedit eum corporis, voluptatem iste corrupti odit possimus distinctio modi aut ducimus error voluptas at doloribus voluptatibus totam nostrum laborum deleniti. Dicta, omnis natus!
+        Soluta recusandae eaque modi, reiciendis inventore ut repellendus! Libero laboriosam eos facilis excepturi possimus laborum autem ut, reprehenderit dolore aperiam eaque vitae in eligendi tenetur impedit mollitia voluptatibus molestias! Ducimus!
+        Quod cum voluptatibus illum voluptatem enim recusandae dolorem repellat nisi velit mollitia dolores sed perspiciatis eveniet laborum earum obcaecati, unde dignissimos deleniti esse fugit eligendi quia officiis! Quaerat, illum non.
+        Expedita non labore tempora possimus temporibus. Cum accusamus dolorem, repudiandae saepe eos error pariatur, ab itaque ipsum iste minus. Et quasi enim nobis placeat nostrum nam rem adipisci illo repudiandae!
+        Dolores exercitationem, doloremque architecto consequuntur in alias ipsam adipisci eaque temporibus, voluptate ea incidunt optio fugiat, quod soluta illum blanditiis numquam impedit tempore aut odio quos quis. Nulla, dolores tempora!
+        Minima quo error, ipsum provident, natus nesciunt excepturi nulla temporibus architecto earum nobis aliquid cumque. In esse vero dolores numquam doloremque, veniam eos ullam, odit repellat quod quaerat! Quaerat, sed?
+        Earum vel eos sit quam magni eaque rem illum blanditiis odio error recusandae molestiae accusamus dolores quasi in quas beatae voluptate nobis, cupiditate dolore? Asperiores modi corporis voluptas iure odio.</p>
     </section><br>
     <div id="skills" data-aos="fade-right" >
         
     </div>
     <section id="projects">
-        
+        <h1 style="color:#e9eeef">HOME:</h1>
+        <p id="home" style="color:white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, quidem voluptatum nesciunt optio quibusdam nihil, enim inventore voluptas amet voluptatibus corrupti aliquam natus itaque aspernatur nemo quis totam laudantium expedita.
+            Doloremque facilis atque laboriosam labore aperiam minima neque a doloribus ab nostrum magni odit ipsa deleniti, dignissimos ut officiis animi! Ab aut adipisci consequatur dicta error dolorem nobis possimus accusamus.
+            Aperiam voluptatibus, enim accusantium deserunt incidunt sunt illum optio quisquam, illo quia odio nemo? Quisquam dolor, aliquid laudantium quidem natus voluptates ullam, animi nostrum excepturi a inventore quae non facilis.
+            Ex tempore a nulla eaque magnam impedit eum corporis, voluptatem iste corrupti odit possimus distinctio modi aut ducimus error voluptas at doloribus voluptatibus totam nostrum laborum deleniti. Dicta, omnis natus!
+            Soluta recusandae eaque modi, reiciendis inventore ut repellendus! Libero laboriosam eos facilis excepturi possimus laborum autem ut, reprehenderit dolore aperiam eaque vitae in eligendi tenetur impedit mollitia voluptatibus molestias! Ducimus!
+            Quod cum voluptatibus illum voluptatem enim recusandae dolorem repellat nisi velit mollitia dolores sed perspiciatis eveniet laborum earum obcaecati, unde dignissimos deleniti esse fugit eligendi quia officiis! Quaerat, illum non.
+            Expedita non labore tempora possimus temporibus. Cum accusamus dolorem, repudiandae saepe eos error pariatur, ab itaque ipsum iste minus. Et quasi enim nobis placeat nostrum nam rem adipisci illo repudiandae!
+            Dolores exercitationem, doloremque architecto consequuntur in alias ipsam adipisci eaque temporibus, voluptate ea incidunt optio fugiat, quod soluta illum blanditiis numquam impedit tempore aut odio quos quis. Nulla, dolores tempora!
+            Minima quo error, ipsum provident, natus nesciunt excepturi nulla temporibus architecto earum nobis aliquid cumque. In esse vero dolores numquam doloremque, veniam eos ullam, odit repellat quod quaerat! Quaerat, sed?
+            Earum vel eos sit quam magni eaque rem illum blanditiis odio error recusandae molestiae accusamus dolores quasi in quas beatae voluptate nobis, cupiditate dolore? Asperiores modi corporis voluptas iure odio.</p>
     </section>
     <section id="contact">
         
@@ -445,5 +511,31 @@
     <script>
         AOS.init();
     </script>
+    <script>
+
+       
+        document.addEventListener('DOMContentLoaded', function () {
+        
+            const toggleMenu = document.getElementById('toggle-menu');
+            const nav = document.querySelector('nav');
+            const menuLinks = nav.querySelectorAll('a');
+            
+         
+            document.addEventListener('click', function (event) {
+                // If the clicked element is not the menu or the label, uncheck the checkbox
+                if (!nav.contains(event.target) && event.target !== toggleMenu && event.target !== document.querySelector('label') ) {
+                    toggleMenu.checked = false;
+                }
+            });
+        
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    toggleMenu.checked = false;
+                });
+            });
+        });
+        
+        
+    </script>
 </body>
-  </html> 
+            </html>
