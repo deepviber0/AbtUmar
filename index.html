@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
+<meta name="viewport" content="width=1200,initial-scale=0.99,maximum-scale:1.0,user-scalable=no">
 
     <title>Portfolio</title>
     
@@ -22,7 +21,7 @@
             margin-top:200px;
         }
 
-
+       
 
         input:focus {
             color: red;
@@ -175,12 +174,12 @@
             width: 100%;
             margin-top: 0%;
             margin: 0%;
-            height:770px;
+            height:800px;
         }
         .icons{
             color: aliceblue;
             font-size: 25px;
-            margin-left: 25px;
+            margin-left: 80px;
             margin-top: 0%;
            
         }
@@ -243,10 +242,14 @@
         }
 
         #mainimg{
-            height:150px;
-            margin-top: -70px;
+            height:220px;
+            margin-top: 50px;
             margin-bottom: 90px;
             z-index: 10;
+            margin-left:160px;
+        }
+        #mains{
+            display: none;
         }
 
         nav a::selection{
@@ -398,7 +401,17 @@
 
         @media screen and (min-width: 768px) {
             
-            #mainimg{
+            
+
+
+           
+            nav {
+                display: flex;
+                gap: 18px;
+            }
+
+            #mains{
+                display: flex;
                 height:390px;
                 background: transparent;
                 margin-top: 110px;
@@ -410,12 +423,6 @@
                 transform: translate(10,950);
             }
 
-
-           
-            nav {
-                display: flex;
-                gap: 18px;
-            }
             #projects,#about{
                 margin-left:150px;
                 margin-top: 35px;
@@ -436,6 +443,9 @@
                 display: none;
             }
             label{
+                display: none;
+            }
+            #mainimg{
                 display: none;
             }
            
@@ -793,7 +803,7 @@
             textarea{
                 border-radius: 7px;
             }
-    
+            
             ::-webkit-input-placeholder{
                 color:rgb(51, 114, 215);
                 padding: 5px;
@@ -816,14 +826,14 @@
     </style>
    
 </head>
-<>
-    <div id="home" autofocus>
+<body>
+    <div id="home" tabindex="0">
         <header>
             <a id="h">Portfolio</a>
             <input type="checkbox" id="toggle-menu" class="toggle-menu">
             <label for="toggle-menu" class="hash"><i class='bx bx-menu'></i></label>
             <nav>
-                <a href="#home">Home</a>
+                <a href="#home" >Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
@@ -831,11 +841,11 @@
                 
             </nav>
         </header></div>
-    <div class="home1">
+    <div class="home1" >
         <br><br><br><br><br><br><br>
         <br><div class="id11" data-aos="fade-right" data-aos-duration="1500">
             <h3  id="i1" style="background-color:transparent"><span style="color:rgb(16, 225, 236)">Hello,</span> It's Me</h3><br></div>
-            <img id="mainimg" src="new.jpg" alt="image" align="right" >
+            <img id="mains" src="new.jpg" alt="image" align="right" >
 
 
         <div class="id12" data-aos="fade-left" data-aos-duration="1500">
@@ -857,7 +867,11 @@
        <br><br>
        <a href="path" download="filename" class="download-btn">Download CV</a>
 <br>
-    </div></div>
+
+<img id="mainimg" src="new.jpg" alt="image" >
+
+
+    </div>
     <section id="about">
         <h1 id="abouth1"  data-aos="fade-right" data-aos-duration="1500">About Me</h1>
         <p style="color:white" data-aos="fade-up" data-aos-duration="1500">
@@ -906,7 +920,7 @@ Beyond coding, I have a passion for anime, which has also inspired some of my pr
                     <input type="hidden" name="access_key" value="f4bf5b2a-790a-4cfe-9587-1c686fc68109">
     
                 <label for="name"></label>
-                <input type="text" placeholder="user_name" name="name" id="name" required ><br><br>
+                <input type="text" placeholder="user_name" name="name" id="name" required><br><br>
                 <label for="mail"></label>
                 <input type="email" name="mail" placeholder="example@gmail.com" id="mail" required><br><br>
     
@@ -925,7 +939,13 @@ Beyond coding, I have a passion for anime, which has also inspired some of my pr
     </script>
     <script>
 
-       
+        window.onload = () => {
+            document.querySelector(".home1").scrollIntoView(
+                {
+                    behavior:"smooth"
+                }
+            )
+         };
         document.addEventListener('DOMContentLoaded', function () {
         
             const toggleMenu = document.getElementById('toggle-menu');
